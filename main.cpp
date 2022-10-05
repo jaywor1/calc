@@ -32,19 +32,19 @@ int main()
         }
         else if (s == "add")
         {
-            cout << "sol: " << add(x, y) << "\n\n";
+            cout << "sol: " << x + y << "\n\n";
         }
         else if (s == "substitute")
         {
-            cout << "sol: " << substitute(x, y) << "\n\n";
+            cout << "sol: " << x - y << "\n\n";
         }
         else if (s == "multiply")
         {
-            cout << "sol: " << multiply(x, y) << "\n\n";
+            cout << "sol: " << x * y << "\n\n";
         }
         else if (s == "devide")
         {
-            cout << "sol: " << devide(x, y) << "\n\n";
+            cout << "sol: " << x / y << "\n\n";
         }
         else if (s == "gcd")
         {

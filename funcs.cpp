@@ -2,22 +2,6 @@
 
 namespace funcs
 {
-	int add(int x, int y)
-	{
-		return x + y;
-	}
-	int substitute(int x, int y)
-	{
-		return x - y;
-	}
-	int multiply(int x, int y)
-	{
-		return x * y;
-	}
-	int devide(int x, int y)
-	{
-		return x / y;
-	}
 	int gcd(int x, int y)
 	{
 		if (x == y)
