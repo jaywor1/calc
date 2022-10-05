@@ -21,9 +21,9 @@ int main()
     while (true)
     {
         cout << "Enter first number: ";
-        int x{in::gi()};
+        float x{in::gf()};
         cout << "Enter second number: ";
-        int y{in::gi()};
+        float y{in::gf()};
         cout << "Enter operation or type in help: ";
         std::cin.ignore();
         string s{in::gs()};
@@ -54,7 +54,7 @@ int main()
         }
         else if (s == "mod")
         {
-            op::sol(x % y);
+            op::sol(int(x) % int(y));
         }
         else if (s == "sol_lin")
         {
