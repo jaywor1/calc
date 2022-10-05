@@ -1,4 +1,5 @@
-#include "funcs.h"
+#include "algebra.h"
+#include "output_control.h"
 
 #include <iostream>
 #include <string>
@@ -15,16 +16,16 @@ using std::string;
 
 int main()
 {
-    print_logo();
+    op::print_logo();
     while (true)
     {
         cout << "Enter first number: ";
-        int x{gi_input()};
+        int x{op::i_in()};
         cout << "Enter second number: ";
-        int y{gi_input()};
+        int y{op::i_in()};
         cout << "Enter operation or type in help: ";
         std::cin.ignore();
-        string s{gs_input()};
+        string s{op::s_in()};
 
         if (s == "help")
         {
@@ -32,23 +33,23 @@ int main()
         }
         else if (s == "add")
         {
-            cout << "sol: " << x + y << "\n\n";
+            op::sol(x + y);
         }
         else if (s == "substitute")
         {
-            cout << "sol: " << x - y << "\n\n";
+            op::sol(x - y);
         }
         else if (s == "multiply")
         {
-            cout << "sol: " << x * y << "\n\n";
+            op::sol(x * y);
         }
         else if (s == "devide")
         {
-            cout << "sol: " << x / y << "\n\n";
+            op::sol(x / y);
         }
         else if (s == "gcd")
         {
-            cout << "sol: " << gcd(x, y) << "\n\n";
+            op::sol(algebra::gcd(x, y));
         }
         else if (s == "mod")
         {
