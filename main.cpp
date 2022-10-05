@@ -1,5 +1,6 @@
 #include "algebra.h"
 #include "output_control.h"
+#include "input_control.h"
 
 #include <iostream>
 #include <string>
@@ -20,12 +21,12 @@ int main()
     while (true)
     {
         cout << "Enter first number: ";
-        int x{op::i_in()};
+        int x{in::gi()};
         cout << "Enter second number: ";
-        int y{op::i_in()};
+        int y{in::gi()};
         cout << "Enter operation or type in help: ";
         std::cin.ignore();
-        string s{op::s_in()};
+        string s{in::gs()};
 
         if (s == "help")
         {
@@ -53,7 +54,11 @@ int main()
         }
         else if (s == "mod")
         {
-            cout << "sol: " << x % y << "\n\n";
+            op::sol(x % y);
+        }
+        else if (s == "sol_lin")
+        {
+            op::sol(algebra::sol_lin(x, y));
         }
     }
 }

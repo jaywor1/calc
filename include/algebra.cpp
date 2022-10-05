@@ -25,7 +25,14 @@ namespace algebra
 		else
 		{
 			std::cout << "Error in gcd function\n";
+			return -1;
 		}
+	}
+
+	float sol_lin(float a, float b)
+	{
+		// ax + b = 0
+		return ((-b) / a);
 	}
 
 }

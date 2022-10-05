@@ -7,10 +7,8 @@
 namespace op
 {
     void sol(int n);
+    void sol(float n);
     void print_logo();
-    std::string remove_whitespaces();
-    int i_in();
-    std::string s_in();
 }
 
 #endif

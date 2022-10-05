@@ -6,17 +6,10 @@ namespace op
     {
         std::cout << "sol: " << n << "\n\n";
     }
-    int i_in()
+
+    void sol(float n)
     {
-        int x{};
-        std::cin >> x;
-        return x;
-    }
-    std::string s_in()
-    {
-        std::string x{};
-        std::getline(std::cin, x);
-        return x;
+        std::cout << "sol: " << n << "\n\n";
     }
 
     void print_logo()
@@ -31,19 +24,6 @@ namespace op
                                               
     )" << '\n';
         std::cout << "C ........ Computing\nA ........ Algebraic\nL ........ Logarithmic\nC ........ Calculator\n";
-    }
-    std::string remove_whitespaces(std::string expression)
-    {
-        // Removes whitespaces
-        std::string temp{""};
-        for (int i = 0; i < expression.size(); i++)
-        {
-            if (expression[i] != ' ')
-            {
-                temp += expression[i];
-            }
-        }
-        return temp;
     }
 
 }
