@@ -8,6 +8,7 @@ namespace in
 {
     std::string remove_whitespaces();
     int gi();
+    float gf();
     std::string gs();
 }
 

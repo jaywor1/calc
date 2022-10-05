@@ -8,6 +8,12 @@ namespace in
         std::cin >> x;
         return x;
     }
+    int gf()
+    {
+        float x{};
+        std::cin >> x;
+        return x;
+    }
     std::string gs()
     {
         std::string x{};
