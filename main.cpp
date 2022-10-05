@@ -15,7 +15,6 @@ using std::string;
 
 int main()
 {
-
     print_logo();
     while (true)
     {

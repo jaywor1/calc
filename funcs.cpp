@@ -1,62 +1,65 @@
 #include "funcs.h"
-int add(int x, int y)
+
+namespace funcs
 {
-	return x + y;
-}
-int substitute(int x, int y)
-{
-	return x - y;
-}
-int multiply(int x, int y)
-{
-	return x * y;
-}
-int devide(int x, int y)
-{
-	return x / y;
-}
-int gcd(int x, int y)
-{
-	if (x == y)
+	int add(int x, int y)
 	{
+		return x + y;
+	}
+	int substitute(int x, int y)
+	{
+		return x - y;
+	}
+	int multiply(int x, int y)
+	{
+		return x * y;
+	}
+	int devide(int x, int y)
+	{
+		return x / y;
+	}
+	int gcd(int x, int y)
+	{
+		if (x == y)
+		{
+			return x;
+		}
+		else if (x == 0 || y == 0)
+		{
+			return std::max(x, y);
+		}
+		else if (x > y)
+		{
+			x = x % y;
+			gcd(x, y);
+		}
+		else if (x < y)
+		{
+			y = y % x;
+			gcd(x, y);
+		}
+		else
+		{
+			std::cout << "Error in gcd function\n";
+		}
+	}
+
+	int gi_input()
+	{
+		int x{};
+		std::cin >> x;
 		return x;
 	}
-	else if (x == 0 || y == 0)
+	std::string gs_input()
 	{
-		return std::max(x, y);
+		std::string x{};
+		std::getline(std::cin, x);
+		return x;
 	}
-	else if (x > y)
-	{
-		x = x % y;
-		gcd(x, y);
-	}
-	else if (x < y)
-	{
-		y = y % x;
-		gcd(x, y);
-	}
-	else
-	{
-		std::cout << "Error in gcd function\n";
-	}
-}
 
-int gi_input()
-{
-	int x{};
-	std::cin >> x;
-	return x;
-}
-std::string gs_input()
-{
-	std::string x{};
-	std::getline(std::cin, x);
-	return x;
-}
-
-void print_logo()
-{
-	std::cout << R"(
+	void print_logo()
+	{
+		std::cout << R"(
    _____                  _           _____   
   / ____|       /\       | |         / ____|  
  | |           /  \      | |        | |       
@@ -65,18 +68,19 @@ void print_logo()
   \_____(_) /_/    \_(_) |______(_)  \_____(_)
                                               
     )" << '\n';
-	std::cout << "C ........ Computing\nA ........ Algebraic\nL ........ Logarithmic\nC ........ Calculator\n";
-}
-std::string remove_whitespaces(std::string expression)
-{
-	// Removes whitespaces
-	std::string temp{""};
-	for (int i = 0; i < expression.size(); i++)
-	{
-		if (expression[i] != ' ')
-		{
-			temp += expression[i];
-		}
+		std::cout << "C ........ Computing\nA ........ Algebraic\nL ........ Logarithmic\nC ........ Calculator\n";
 	}
-	return temp;
+	std::string remove_whitespaces(std::string expression)
+	{
+		// Removes whitespaces
+		std::string temp{""};
+		for (int i = 0; i < expression.size(); i++)
+		{
+			if (expression[i] != ' ')
+			{
+				temp += expression[i];
+			}
+		}
+		return temp;
+	}
 }
