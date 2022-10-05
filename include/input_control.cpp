@@ -8,7 +8,7 @@ namespace in
         std::cin >> x;
         return x;
     }
-    int gf()
+    float gf()
     {
         float x{};
         std::cin >> x;
