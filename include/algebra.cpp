@@ -6,7 +6,7 @@ Expresion::Expresion(std::string s)
 	int j{s.find(',')};
 	int k{s.find(')')};
 
-	cmd = s.substr(0, i + 1);
+	cmd = s.substr(0, i);
 	x = stof(s.substr(i + 1, j - i - 1));
 	y = stof(s.substr(j + 1, k - j - 1));
 }
