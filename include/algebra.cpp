@@ -81,3 +81,65 @@ float Expresion::validate()
 		return -1;
 	}
 }
+
+// 8+6*3*4+3
+float basic(std::string expression)
+{
+	std::string operators = "+-*/";
+
+	char op = '+';
+
+	bool full_break{false};
+
+	int op_index{0};
+
+	for (int i = 0; i < expression.length(); i++)
+	{
+		if (int(expression[i]) < 48)
+		{
+			for (int y = 0; y < operators.length(); y++)
+			{
+				if (expression[i] == operators[y])
+				{
+					op = operators[y];
+					op_index = i;
+					full_break = true;
+					break;
+				}
+			}
+		}
+		if (full_break)
+			break;
+	}
+
+	float x{stof(expression.substr(0, op_index))};
+	float y{stof(expression.substr(op_index + 1, expression.length() - op_index))};
+
+	if (op == '+')
+	{
+		return x + y;
+	}
+	else if (op == '-')
+	{
+		return x - y;
+	}
+	else if (op == '*')
+	{
+		return x * y;
+	}
+	else if (op == '/')
+	{
+		if (y == 0)
+		{
+			std::cout << "ZERO DIVISION ERROR\n";
+			return -1;
+		}
+		else
+			return x / y;
+	}
+	else
+	{
+		std::cout << "Unknown error\n";
+		return -1;
+	}
+}

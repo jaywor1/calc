@@ -17,4 +17,6 @@ public:
     float validate();
 };
 
+float basic(std::string expression);
+
 #endif
