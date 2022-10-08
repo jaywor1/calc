@@ -50,7 +50,7 @@ int main()
         }
         else if (s == "gcd")
         {
-            op::sol(algebra::gcd(x, y));
+            op::sol(gcd(x, y));
         }
         else if (s == "mod")
         {
@@ -58,7 +58,7 @@ int main()
         }
         else if (s == "sol_lin")
         {
-            op::sol(algebra::sol_lin(x, y));
+            op::sol(sol_lin(x, y));
         }
     }
 }
