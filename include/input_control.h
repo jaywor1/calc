@@ -6,7 +6,7 @@
 
 namespace in
 {
-    std::string remove_whitespaces();
+    std::string rm_spaces();
     int gi();
     float gf();
     std::string gs();
