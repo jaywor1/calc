@@ -11,35 +11,28 @@ Expresion::Expresion(std::string s)
 	y = stof(s.substr(j + 1, k - j - 1));
 }
 
-int gcd(int x, int y)
+int Expresion::gcd()
 {
-	if (x == y)
+	while ((x != y) && (x != 0) && (y != 0))
 	{
-		return x;
+		if (x > y)
+		{
+			x = int(x) % int(y);
+		}
+		else if (x < y)
+		{
+			y = int(y) % int(x);
+		}
+		else
+		{
+			std::cout << "Error in gcd fucntion\n";
+			return -1;
+		}
 	}
-	else if (x == 0 || y == 0)
-	{
-		return std::max(x, y);
-	}
-	else if (x > y)
-	{
-		x = x % y;
-		gcd(x, y);
-	}
-	else if (x < y)
-	{
-		y = y % x;
-		gcd(x, y);
-	}
-	else
-	{
-		std::cout << "Error in gcd function\n";
-		return -1;
-	}
+	return std::max(x, y);
 }
 
-float sol_lin(float a, float b)
+float Expresion::sol_lin()
 {
-	// ax + b = 0
-	return ((-b) / a);
+	return (-y) / x;
 }

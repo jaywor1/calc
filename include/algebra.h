@@ -12,9 +12,8 @@ public:
     float y{};
 
     Expresion(std::string s);
+    int gcd();
+    float sol_lin();
 };
-
-int gcd(int x, int y);
-float sol_lin(float x, float y);
 
 #endif
