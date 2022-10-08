@@ -35,4 +35,27 @@ namespace in
         return temp;
     }
 
+    std::string rm_par(std::string expression)
+    {
+        if (expression.find('(') > expression.length())
+        {
+            // No parentheses
+        }
+        else
+        {
+            int f_par{expression.find('(')};
+            int depth{0};
+
+            for (int i = f_par + 1; i < expression.length(); i++)
+            {
+                if (expression[i] == ')' && depth == 0)
+                    return expression.substr(f_par + 1, i - f_par - 1);
+                if (expression[i] == '(')
+                    depth++;
+                else if (expression[i] == ')')
+                    depth--;
+            }
+        }
+    }
+
 }
