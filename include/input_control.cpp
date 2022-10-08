@@ -39,7 +39,7 @@ namespace in
     {
         if (expression.find('(') > expression.length())
         {
-            // No parentheses
+            return "ERROR";
         }
         else
         {
