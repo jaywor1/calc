@@ -1,6 +1,6 @@
-#include "algebra.h"
-#include "output_control.h"
-#include "input_control.h"
+#include "include/algebra.h"
+#include "include/output_control.h"
+#include "include/input_control.h"
 
 #include <iostream>
 #include <string>
