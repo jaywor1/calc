@@ -36,3 +36,48 @@ float Expresion::sol_lin()
 {
 	return (-y) / x;
 }
+
+float Expresion::validate()
+{
+	try
+	{
+		if (cmd == "add")
+		{
+			return x + y;
+		}
+		else if (cmd == "substitute")
+		{
+			return x - y;
+		}
+		else if (cmd == "multiply")
+		{
+			return x * y;
+		}
+		else if (cmd == "devide")
+		{
+			if (y == 0)
+			{
+				std::cout << "Cannot devide by zero.\n";
+				return -1;
+			}
+			return x / y;
+		}
+		else if (cmd == "mod")
+		{
+			return int(x) % int(y);
+		}
+		else if (cmd == "gcd")
+		{
+			return gcd();
+		}
+		else if (cmd == "sol_lin")
+		{
+			return sol_lin();
+		}
+	}
+	catch (...)
+	{
+		std::cout << "Error occurred\n";
+		return -1;
+	}
+}

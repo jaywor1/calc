@@ -14,6 +14,7 @@ public:
     Expresion(std::string s);
     int gcd();
     float sol_lin();
+    float validate();
 };
 
 #endif
