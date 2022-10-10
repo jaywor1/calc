@@ -60,7 +60,7 @@ namespace in
 
     int *op_loc(std::string expression)
     {
-        int op_loc_arr[4];
+        int *op_loc_arr = new int[4];
 
         char operators[] = "*/+-";
 
