@@ -58,4 +58,18 @@ namespace in
         }
     }
 
+    int *op_loc(std::string expression)
+    {
+        int op_loc_arr[4];
+
+        char operators[] = "*/+-";
+
+        for (size_t i = 0; i < sizeof(operators); i++)
+        {
+            op_loc_arr[i] = expression.find(operators[i]);
+        }
+
+        return op_loc_arr;
+    }
+
 }

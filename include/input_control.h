@@ -11,6 +11,7 @@ namespace in
     int gi();
     float gf();
     std::string gs();
+    int *op_loc(std::string expression);
 }
 
 #endif
