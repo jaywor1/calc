@@ -143,3 +143,7 @@ float basic(std::string expression)
 		return -1;
 	}
 }
+float calculate(std::string expression)
+{
+	return 2;
+}

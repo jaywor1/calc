@@ -18,5 +18,6 @@ public:
 };
 
 float basic(std::string expression);
+float calculate(std::string expression);
 
 #endif
