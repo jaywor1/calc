@@ -1,2 +1,2 @@
 # calc
-Calculator written in C++ 4fun
+Calculator written in C++ 4suffering
